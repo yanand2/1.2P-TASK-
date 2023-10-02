@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Functions Demonstration - SIT120 Task 1.2P</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f0f0f0;
+  }
+  button {
+    margin: 20px;
+    padding: 30px 35px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  footer {
+    text-align: center;
+    background-color: #3f0780;
+    color: white;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>SIT120 INTRODUCTION TO RESPOSNSIVE WEBAPPS Task 1.2P - Functions Demonstration</h1>
+</header>
+
+<button onclick="displayStringMethods()">String Methods</button>
+<button onclick="displayNumberMethods()">Number Methods</button>
+<button onclick="displayArrayMethods()">Array Methods</button>
+<button onclick="displayDateMethods()">Date Methods</button>
+<button onclick="displayFunctionMethods()">Function Methods</button>
+
+<footer>
+  Made by Anand Enterprises - All Rights Reserved@2023
+</footer>
+
+<script>
+  // String Methods
+  function displayStringMethods() {
+    var str = "Hello VIEWERS HAVE A LOOK AT DIFFERENT FUNCTIONS) !";
+    alert('String Methods:\n' +
+      str.toLowerCase() + '\n' +
+      str.toUpperCase() + '\n' +
+      str.charAt(0) + '\n' +
+      str.indexOf('World') + '\n' +
+      str.slice(0, 5)
+    );
+  }
+
+  // Number Methods
+  function displayNumberMethods() {
+    var num = 847794393.456;
+    alert('Number Methods:\n' +
+      num.toFixed(2) + '\n' +
+      num.toPrecision(4) + '\n' +
+      Math.round(num) + '\n' +
+      Math.ceil(num) + '\n' +
+      Math.floor(num)
+    );
+  }
+
+  // Array Methods
+  function displayArrayMethods() {
+    var arr = [12, 23, 34,454, 55];
+    alert('Array Methods:\n' +
+      arr.slice(0, 3) + '\n' +
+      arr.reverse() + '\n' +
+      arr.pop() + '\n' +
+      arr.push(6) + '\n' +
+      arr.sort()
+    );
+  }
+
+  // Date Methods
+  function displayDateMethods() {
+    var date = new Date();
+    alert('Date Methods:\n' +
+      date.getDate() + '\n' +
+      date.getMonth() + '\n' +
+      date.getFullYear() + '\n' +
+      date.getHours() + '\n' +
+      date.getMinutes()
+    );
+  }
+
+  // Function Methods
+  function greet(name) {
+    return "Hello, " + name;
+  }
+
+  function displayFunctionMethods() {
+    alert('Function Methods:\n' +
+      greet.call(null, "MIA") + '\n' +
+      greet.apply(null, ["BoObO"])
+    );
+  }
+</script>
+
+</body>
+</html>
